@@ -91,6 +91,7 @@ class ClienteController {
     }
 
     async listClientes(req, res) {
+        console.log('oi')
         const clientes = await clienteService.listClientes()
         return res
             .status(200)
