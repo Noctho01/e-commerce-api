@@ -1,0 +1,47 @@
+{
+  "name": "e-commerce-api",
+  "version": "1.0.0",
+  "description": "APi sistema de um e-commerce para compra e venda de jogos",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "dev": "NODE_ENV=dev nodemon src/index.js",
+    "pro": "NODE_ENV=pro node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Noctho01/e-commerce-api.git"
+  },
+  "keywords": [
+    "jogos",
+    "e-commerce",
+    "api",
+    "nodejs"
+  ],
+  "author": "Vinicius Dos Santos Rodrigues <vinicius.dev01@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Noctho01/e-commerce-api/issues"
+  },
+  "homepage": "https://github.com/Noctho01/e-commerce-api#readme",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "cookie-parser": "^1.4.6",
+    "crypto": "^1.0.1",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "path": "^0.12.7",
+    "sequelize": "^6.12.5",
+    "validatorjs": "^3.22.1"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.15"
+  }
+}

@@ -1,0 +1,10 @@
+# dotenv
+src/variaveis/.env.dev
+src/variaveis/.env.pro
+
+# node_modules
+node_modules
+
+# docker
+Dockerfile
+.dockerignore
