@@ -8,7 +8,6 @@ const secret = security.crypto
 
 export default (req, res, next) => {
 	let errors = {}
-	const path = req.path
 	const userData = req.body
 	const scheme = {
 		nome: ['required', 'string', 'min:5', 'max:50'],
@@ -24,14 +23,7 @@ export default (req, res, next) => {
 		complemento: ['required', 'string'],
 	}
 
-	switch(path) {
-		case '/cliente':
-			scheme.dados_pagamento = 'string'
-			break
-		case '/anunciante':
-			scheme.carteira_virtual = 'string'
-			break
-	}
+	scheme.dados_pagamento = 'string'
 
 	Validator.useLang('pt')
 	const resultadoValidação = new Validator(userData, scheme)
