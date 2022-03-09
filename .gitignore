@@ -1,6 +1,6 @@
 # dotenv
-src/variaveis/.env.dev
-src/variaveis/.env.pro
+src/config/.env.dev
+src/config/.env.pro
 
 # node_modules
 node_modules
