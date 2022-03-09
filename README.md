@@ -34,7 +34,7 @@
 - [x] Adicionar jogos ao carrinho
 - [x] Gerenciar jogos no carrinho
 - [x] Efetuar compra dos jogos incluidos no carrinho
-    - [x] Ferifica dados do cartão
+    - [x] Verifica dados do cartão
     - [x] Analise do jogo e estoque
     - [x] Resposta
 - [x] Monitorar jogos solicitados (aprovação, entrega, feedback)
