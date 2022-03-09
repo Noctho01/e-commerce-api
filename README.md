@@ -42,14 +42,14 @@
 <br>
 
 ## Rodando Aplicação
-*O Deploy da api será feita no heroku, aguarde...*
+*O Deploy da api será feita no heroku dia 10 de março, aguarde...*
 
 ![banner](images/construcao.png)
 
 <br>
 
 ## Demonstração da Aplicação
-*O Deploy da api será feita no heroku, aguarde...*
+*O Deploy da api será feita no heroku dia 10 de março, aguarde...*
 
 ![banner](images/construcao.png)
 
