@@ -81,7 +81,6 @@ class ProdutoServices {
 	async getProduto(produtoId) {
 		let produto = await Produto.findByPk(produtoId, {
 			attributes: [
-				'id',
 				'nome',
 				'preco',
 				'estoque',
