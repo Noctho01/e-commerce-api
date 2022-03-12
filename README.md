@@ -41,6 +41,11 @@
 
 <br>
 
+## Esquemas (Modelos)
+![](docs/images/esquemas.png)
+
+<br>
+
 ## Documentação
 > *Escrevi uma documentação simplificada, pretendo migrar para o swagger mais pela frente*
 - **URL da API:** https://playforward-ecommerce-api.herokuapp.com/
