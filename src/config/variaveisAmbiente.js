@@ -5,7 +5,11 @@ import { config } from 'dotenv'
 const __fileurl = fileURLToPath(import.meta.url)
 const __dirname = dirname(__fileurl)
 
-if (process.env.NODE_ENV === 'dev') config({ path: resolve(__dirname, '.env.dev') })
+config({
+    path: process.env.NODE_ENV === 'dev' 
+        ? resolve(__dirname, '.env.dev')
+        : resolve(__dirname, '.env.pro')
+})
 
 const variaveis = {
     api_pagamento: process.env.API_PAGAMENTO,
