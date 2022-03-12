@@ -15,10 +15,7 @@ class ClienteController {
         return res
             .status(200)
             .clearCookie('Authorization')
-            .json({
-                status: 'Ok',
-                message: 'disconnected'
-            })
+            .json({ message: 'disconnected' })
     }
 
     async create(req, res) {
@@ -26,10 +23,7 @@ class ClienteController {
         await clienteService.create(clienteData)
         return res
             .status(201)
-            .json({
-                status: 'Ok',
-                message: 'created'
-            })
+            .json({ message: 'created' })
     }
 
     async account(req, res) {
@@ -38,11 +32,7 @@ class ClienteController {
         cliente.senha = undefined
         return res
             .status(200)
-            .json({
-                status: 'Ok',
-                message: 'accessed',
-                data: cliente
-            })
+            .json(cliente)
     }
 
     async update(req, res) {
@@ -61,10 +51,7 @@ class ClienteController {
     
         return res
             .status(201)
-            .json({
-                status: 'Ok',
-                message: 'updated'
-            })
+            .json({ message: 'updated' })
     }
 
     async delete(req, res) {
@@ -72,10 +59,7 @@ class ClienteController {
         await clienteService.delete(clienteId)
         return res
         .status(202)
-        .json({
-            status: 'Ok',
-            message: 'deleted'
-        })
+        .json({ message: 'deleted' })
     }
 
     async getCliente(req, res) {
@@ -83,11 +67,7 @@ class ClienteController {
         const cliente = await clienteService.getCliente(clienteId)
         return res
             .status(200)
-            .json({
-                status: 'Ok',
-                message: 'geted',
-                data: cliente
-            })
+            .json(cliente)
     }
 
     async listClientes(req, res) {
@@ -95,11 +75,7 @@ class ClienteController {
         const clientes = await clienteService.listClientes()
         return res
             .status(200)
-            .json({
-                status: 'Ok',
-                message: 'geted',
-                data: clientes
-            })
+            .json(clientes)
     }
 }
 

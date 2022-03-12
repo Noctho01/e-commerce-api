@@ -41,23 +41,21 @@
 
 <br>
 
-## Rodando Aplicação
-*O Deploy da api será feita no heroku dia 10 de março, aguarde...*
+## Documentação
+> *Escrevi uma documentação simplificada, pretendo migrar para o swagger mais pela frente*
 
-![banner](images/construcao.png)
+- [Serviços Globais](docs/sGlobais.md)
 
-<br>
+- [Serviços CRUD](docs/sCrud.md)
 
-## Demonstração da Aplicação
-*O Deploy da api será feita no heroku dia 10 de março, aguarde...*
+- [Serviços Usuario](docs/sUsuario.md)
 
-![banner](images/construcao.png)
 
 <br>
 <br>
 
 > ***Vinicius dos Santos Rodrigues***
 
-> [vinicius.dev01@gmail.com](vinicius.dev01@gmail.com)
+[vinicius.dev01@gmail.com](vinicius.dev01@gmail.com)
 
-> [linkedin](https://www.linkedin.com/in/vinicius-rodrigues-3b94161a9/)
+[linkedin](https://www.linkedin.com/in/vinicius-rodrigues-3b94161a9/)

@@ -5,6 +5,9 @@ src/config/.env.pro
 # node_modules
 node_modules
 
+#temporario
+docs
+
 # docker
 Dockerfile
 docker-compose.yml
