@@ -12,7 +12,7 @@
 
 *Lista de clientes cadastrados*
 
-<code>RESPONSE: *Array*</code>
+<code>RESPONSE: *200*, *application/json*, *Array*</code>
 
 ~~~~json
 [
@@ -48,7 +48,7 @@ id do cliente
 ex: /clientes/532
 ~~~
 
-<code>RESPONSE: *Object* </code>
+<code>RESPONSE: *200*, *application/json*, *Object* </code>
 
 ~~~~json
 {
@@ -73,7 +73,7 @@ ex: /clientes/532
 
 *Lista de Jogos em catalogo*
 
-<code>RESPONSE: *Array* </code>
+<code>RESPONSE: *200*, *application/json*, *Array* </code>
 
 ~~~~json
 [
@@ -113,7 +113,7 @@ id do jogo
 ex: /produto/328
 ~~~
 
-<code>RESPONSE: *Object* </code>
+<code>RESPONSE: *200*, *application/json*, *Object* </code>
 
 ~~~~json
 {
