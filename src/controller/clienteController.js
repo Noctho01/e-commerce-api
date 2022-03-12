@@ -8,14 +8,14 @@ class ClienteController {
         return res
             .status(200)
             .cookie('Authorization', 'Bearer ' + jwt.token)
-            .json({ message: 'connected' })
+            .json({ message: 'token created' })
     }
 
     logout(req, res) {
         return res
             .status(200)
             .clearCookie('Authorization')
-            .json({ message: 'disconnected' })
+            .json({ message: 'token deleted' })
     }
 
     async create(req, res) {
