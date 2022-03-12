@@ -6,7 +6,7 @@
 
 ![](https://img.shields.io/static/v1?label=&message=GET&color=77ab59&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/clientes&color=eafde6&style=for-the-badge)
 
-<code>RESPONSE:</code>
+<code>RESPONSE: *Array*</code>
 
 ~~~~json
 [
