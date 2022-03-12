@@ -1,4 +1,4 @@
-[RETORNAR](https://github.com/Noctho01/e-commerce-api)
+[RETORNAR](../README.md)
 
 <br>
 
@@ -9,6 +9,8 @@
 <br>
 
 ![](https://img.shields.io/static/v1?label=&message=GET&color=77ab59&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/clientes&color=eafde6&style=for-the-badge)
+
+*Lista de clientes cadastrados*
 
 <code>RESPONSE: *Array*</code>
 
@@ -38,6 +40,8 @@
 
 ![](https://img.shields.io/static/v1?label=&message=GET&color=77ab59&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/clientes/id&color=eafde6&style=for-the-badge)
 
+*Buscar cliente/usuario especifico*
+
 <code>PARAMETRO: id</code>
 ~~~
 id do cliente
@@ -66,6 +70,8 @@ ex: /clientes/532
 <br>
 
 ![](https://img.shields.io/static/v1?label=&message=GET&color=77ab59&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/catalogo&color=eafde6&style=for-the-badge)
+
+*Lista de Jogos em catalogo*
 
 <code>RESPONSE: *Array* </code>
 
@@ -98,6 +104,8 @@ ex: /clientes/532
 <br>
 
 ![](https://img.shields.io/static/v1?label=&message=GET&color=77ab59&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/produto/id&color=eafde6&style=for-the-badge)
+
+*Buscar jogo especifico*
 
 <code>PARAMETRO: id</code>
 ~~~
@@ -145,6 +153,6 @@ ex: /produto/328
 <br>
 <br>
 
-[RETORNAR](https://github.com/Noctho01/e-commerce-api)
+[RETORNAR](../README.md)
 
 [SUBIR](#serviços-globais)
