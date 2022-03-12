@@ -40,36 +40,42 @@ class ProdutoServices {
 		return produtoParser
 	}
 
-	async searchProdutos(query) {
-		const produtos = await Produto.findAll({
-			where: [{
-				estoque: {
-					[Op.gt]: 0
-				}
-			},
-				query
-			],
-			attributes: [
-				'id',
-				'nome',
-				'preco',
-				'estoque'
-			],
+	async update(bodyUpdate, produtoId) {
+		const errors = {}
+		let generosProduto = []
+		const produto = await Produto.findByPk(produtoId, {
 			include: {
-				association: 'plataforma',
-				attributes: ['plataforma']
+				association: 'generos',
+				through: {
+					attributes: []
+				}
 			}
 		})
 
-		if (!produtos) throw new CustomErrors.NotFound('Produtos')
+		if (!produto) throw new CustomErrors.NotFound('Produto')
 
-		const produtoParser = JSON.parse(JSON.stringify(produtos))
+		Object.keys(bodyUpdate).forEach(chave => {
+			if (chave === 'generos') {
+				generosProduto = typeof bodyUpdate[chave] === 'array'
+					? bodyUpdate[chave]
+					: bodyUpdate[chave]
+						.replace('[','')
+						.replace(']','')
+						.split(',')
+				delete bodyUpdate[chave]
+			}
+			else if (produto[chave] === undefined) {
+				errors[chave] = 'Este campo não existe'
+			}
+			else {
+				produto[chave] = bodyUpdate[chave]
+			}
+		})
 
-		for (const i in produtoParser) {
-			produtoParser[i].plataforma = produtoParser[i].plataforma.plataforma
-		}
+		if (Object.keys(errors).length > 0) throw new CustomErrors.Conflito(errors)
+		if (generosProduto.length > 0) produto.setGeneros(generosProduto)
 
-		return produtoParser
+		await produto.save()
 	}
 
 	async getProduto(produtoId) {
@@ -230,7 +236,7 @@ class ProdutoServices {
 
 		if (carrinho.length === 0) throw new CustomErrors.Conflito('Carrinho está vazio')
 		// pegando o id de cada produto no carrinho do cliente
-		for (produto of carrinho) {
+		for (let produto of carrinho) {
 			idsProdutosCarrinho.push(produto.produto_id)
 		}
 		// Buscando produtos que estejam no carrinho do cliente
@@ -239,10 +245,10 @@ class ProdutoServices {
 			where: { id: { [Op.or]: idsProdutosCarrinho } }
 		})
 		// Ver se todos os produtos estão presentes
-		for (produto of produtos) {
+		for (let produto of produtos) {
 			idsProdutosEncontrados.push(produto.id)
 		}
-		for (val of idsProdutosCarrinho) {
+		for (let val of idsProdutosCarrinho) {
 			if (idsProdutosEncontrados.indexOf(val) === -1) {
 				throw new CustomErrors.Conflito('Algum produto do seu carrinho não está mais disponivel no estoque, revisei seu pedido porfavor.')
 			}

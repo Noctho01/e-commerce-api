@@ -33,7 +33,7 @@ export default (req, res, next) => {
 
 	// Validando CPF
 	if (!errors.cpf) {
-		if (!ValidaCpf(userData.cpf)) errors.cpf = { message: 'cpf invalido' }
+		if (!ValidaCpf(userData.cpf)) errors.cpf = 'cpf invalido'
 	}
 
 	switch (Object.keys(errors).length > 0) {

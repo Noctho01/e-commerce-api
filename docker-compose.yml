@@ -1,0 +1,44 @@
+version: "3.9"
+
+services:
+
+  web:
+    image: noctho/ecommerce_api
+    container_name: playforward-cliente
+    restart: always
+    environment:
+      PORT: 3000
+    networks:
+      - container-bridge-prod
+    ports:
+      - 3000:3000
+    links:
+      - db
+    depends_on:
+      - db
+  
+  db:
+    image: mysql
+    container_name: mysql-server
+    restart: always
+    networks:
+      - container-bridge-prod
+    volumes:
+      - /volumes_db:/var/lib/mysql
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: "06151217"
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - container-bridge-prod
+
+networks:
+  container-bridge-prod:
+    driver: bridge

@@ -1,6 +1,7 @@
 import axios from 'axios'
 import produtoServices from '../services/ProdutoServices.js'
 import * as CustomErrors from '../exceptions/customErrors.js'
+import { api_pagamento } from '../config/variaveisAmbiente.js'
 
 class ProdutoController {
 	// ----------------------------------------------- Carrinho Cliente ------------------------------------------------------
@@ -71,7 +72,6 @@ class ProdutoController {
 		return res
 			.status(200)
 			.json({
-				status: "Ok",
 				paymentSlip,
 				produtos
 			})
@@ -83,7 +83,7 @@ class ProdutoController {
 
 		const configAxios = {
 			method: 'post',
-			url: process.env.API_PAGAMENTO + "" + func || `http://localhost:3222/${func}`,
+			url: api_pagamento + "" + func || `http://localhost:3222/${func}`,
 			data: {
 				nome: req.body.nome,
 				numero: req.body.numero,
@@ -138,6 +138,21 @@ class ProdutoController {
 				status: "Ok",
 				produtos
 			})
+	}
+
+	async catalog(req, res) {
+		const inCatalog = await produtoServices.catalog()
+		return res
+			.status(200)
+			.json(inCatalog)
+	}
+
+	async getProduto(req, res) {
+		const produtoId = req.params.id
+		const produto = await produtoServices.getProduto(produtoId)
+		return res
+			.status(200)
+			.json(produto)
 	}
 }
 

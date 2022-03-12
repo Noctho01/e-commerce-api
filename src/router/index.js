@@ -18,7 +18,6 @@ router
 // Serviços Cliente
 router
 	.get('/catalogo', resolver(produtoController.catalog))
-	.get('/buscar/produtos', resolver(produtoController.searchProdutos))
 	.get('/produto/:id', resolver(produtoController.getProduto))
 	.get('/cliente/carrinho', middleware.autorizacao, resolver(produtoController.getCarrinho))
 	.get('/cliente/carrinho/extrato', middleware.autorizacao, resolver(produtoController.previsionPaymentSlip))

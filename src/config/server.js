@@ -22,6 +22,9 @@ server.use(router)
 
 // middleware de tratamento de erros
 server.use((err, req, res, next) => {
+
+    console.log(err)
+
     if (err.statusCode) {
         return res
             .status(err.statusCode)

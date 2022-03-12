@@ -12,6 +12,7 @@ config({
 })
 
 const variaveis = {
+    api_pagamento: process.env.API_PAGAMENTO,
     database: {
         username: process.env.USER_NAME,
         password: process.env.PSW_DB,
@@ -28,4 +29,4 @@ const variaveis = {
     port: process.env.PORT
 }
 
-export const {database, security, port} = variaveis
+export const {database, security, port, api_pagamento} = variaveis
