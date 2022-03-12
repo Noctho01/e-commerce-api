@@ -140,9 +140,9 @@ O token armazenado no cache cookie do navegador do usuario será deletado.
 <code>REQUEST: *application/json*, *Object*</code>
 ~~~json
 {
-    "nome_do_atributo1": "novo valor",
-    "nome_do_atributo2": "novo valor",
-    "nome_do_atributo3": "novo valor"
+    "nome_da_propriedade1": "novo valor",
+    "nome_da_propriedade2": "novo valor",
+    "nome_da_propriedade3": "novo valor"
 }
 ~~~
 
