@@ -162,7 +162,7 @@ Informe o nome da propriedade e o valor para que seja feita a alteração no ban
 
 ![](https://img.shields.io/static/v1?label=&message=DELETE&color=e35241&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/cliente&color=eafde6&style=for-the-badge)
 
-*Apaga os dados do usuario cancelando seu cadastro como cliente*
+*Com o usuario logado como cliente (token criado atavez do serviço login), apaga os dados do usuario cancelando seu cadastro como cliente*
 
 <code>RESPONSE: *202*, *application/json*, *Object*</code>
 ~~~json
