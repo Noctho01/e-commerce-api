@@ -40,15 +40,59 @@ Retorna uma lista de jogos adicionados ao carrinho do cliente.
 
 **quantidade**: Integer, numero de unidades solicitadas
 
+#
+
 <br>
 <br>
 
-<code>RESPONSE: *404*, *application/json*, *Object*</code>
-~~~json
-{
-    "message": "Carrinho está vazio"
-}
-~~~
+![](https://img.shields.io/static/v1?label=&message=POST&color=268fbe&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/cliente/carrinho/id&color=eafde6&style=for-the-badge)
+
+**Necessario:** *usuario logado como cliente (token criado atavez do serviço login)*
+
+#
+
+<br>
+<br>
+
+![](https://img.shields.io/static/v1?label=&message=POST&color=268fbe&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/cliente&color=eafde6&style=for-the-badge)
+
+**Necessario:** *usuario logado como cliente (token criado atavez do serviço login)*
+
+#
+
+<br>
+<br>
+
+![](https://img.shields.io/static/v1?label=&message=POST&color=268fbe&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/cliente&color=eafde6&style=for-the-badge)
+
+**Necessario:** *usuario logado como cliente (token criado atavez do serviço login)*
+
+#
+
+<br>
+<br>
+
+![](https://img.shields.io/static/v1?label=&message=POST&color=268fbe&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/cliente&color=eafde6&style=for-the-badge)
+
+**Necessario:** *usuario logado como cliente (token criado atavez do serviço login)*
+
+#
+
+<br>
+<br>
+
+![](https://img.shields.io/static/v1?label=&message=POST&color=268fbe&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/cliente&color=eafde6&style=for-the-badge)
+
+**Necessario:** *usuario logado como cliente (token criado atavez do serviço login)*
+
+#
+
+<br>
+<br>
+
+![](https://img.shields.io/static/v1?label=&message=POST&color=268fbe&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/cliente&color=eafde6&style=for-the-badge)
+
+**Necessario:** *usuario logado como cliente (token criado atavez do serviço login)*
 
 #
 
