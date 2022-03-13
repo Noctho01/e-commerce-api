@@ -21,7 +21,7 @@ class ProdutoController {
 		const carrinho = await produtoServices.getCarrinho(userId)
 		return res
 			.status(200)
-			.json(carrinho)
+			.json({message: carrinho})
 	}
 
 	async updateProdutoCarrinho(req, res) {
