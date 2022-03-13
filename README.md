@@ -54,7 +54,7 @@
 
 - [Serviços CRUD](docs/sCrud.md)
 
-- [Serviços Usuario](docs/sUsuario.md)
+- [Serviços Cliente](docs/sCliente.md)
 
 
 <br>

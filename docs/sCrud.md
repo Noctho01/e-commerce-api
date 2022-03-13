@@ -10,7 +10,7 @@
 
 ![](https://img.shields.io/static/v1?label=&message=POST&color=268fbe&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/cliente&color=eafde6&style=for-the-badge)
 
-*Cadastro de usuarios/cliente*
+Cadastro de usuarios/cliente.
 
 <code>REQUEST: *application/json*, *Object*</code>
 ~~~json
@@ -65,7 +65,7 @@
 
 ![](https://img.shields.io/static/v1?label=&message=POST&color=268fbe&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/cliente/login&color=eafde6&style=for-the-badge)
 
-*Cria um token de alteticação para ter acesso aos serviços de cliente*
+Cria um token de alteticação para ter acesso aos serviços de cliente.
 
 <code>REQUEST: *application/json*, *Object*</code>
 ~~~json
@@ -91,7 +91,9 @@ O token será armazenado em um cookie no cache *Authorization* do navegador do c
 
 ![](https://img.shields.io/static/v1?label=&message=DELETE&color=e35241&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/cliente/logout&color=eafde6&style=for-the-badge)
 
-*Deleta token criado pelo serviço de login, assim impedindo o acesso do usuario aos serviços do cliente*.
+Deleta token criado pelo serviço de login, assim impedindo o acesso do usuario aos serviços do cliente.
+
+**Necessario:** *usuario logado como cliente (token criado atavez do serviço login)*
 
 <code>RESPONSE: *200*, *application*, *Object*</code>
 ~~~json
@@ -109,7 +111,9 @@ O token armazenado no cache cookie do navegador do usuario será deletado.
 
 ![](https://img.shields.io/static/v1?label=&message=GET&color=77ab59&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/cliente&color=eafde6&style=for-the-badge)
 
-*Com o usuario logado como cliente (token criado atavez do serviço login), retorna todos os dados do cliente (menos a senha é claro)*
+Retorna todos os dados do cliente (menos a senha é claro).
+
+**Necessario:** *usuario logado como cliente (token criado atavez do serviço login)*
 
 <code>RESPONSE: *200*, *application/json*, *Object*</code>
 ~~~json
@@ -135,7 +139,7 @@ O token armazenado no cache cookie do navegador do usuario será deletado.
 
 ![](https://img.shields.io/static/v1?label=&message=PUT&color=f5dd7e&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/cliente&color=eafde6&style=for-the-badge)
 
-*Com o usuario logado como cliente (token criado atavez do serviço login), informe os dados a serem alterados*
+Informe os dados a serem alterados
 
 <code>REQUEST: *application/json*, *Object*</code>
 ~~~json
@@ -162,7 +166,9 @@ Informe o nome da propriedade e o valor para que seja feita a alteração no ban
 
 ![](https://img.shields.io/static/v1?label=&message=DELETE&color=e35241&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/cliente&color=eafde6&style=for-the-badge)
 
-*Com o usuario logado como cliente (token criado atavez do serviço login), apaga os dados do usuario cancelando seu cadastro como cliente*
+Apaga os dados do usuario cancelando seu cadastro como cliente.
+
+**Necessario:** *usuario logado como cliente (token criado atavez do serviço login)*
 
 <code>RESPONSE: *202*, *application/json*, *Object*</code>
 ~~~json
