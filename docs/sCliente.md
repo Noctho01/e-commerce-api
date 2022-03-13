@@ -100,12 +100,13 @@ O id representa qual resposta simular ao usar o cartão de credito simulado. Atu
 ex: /cliente/carrinho/solicitar/0
 ~~~
 
-<code>RESPONSE: *application/json*, *Object*</code>
+<code>REQUEST: *application/json*, *Object*</code>
 ~~~json
 
 // IMPORTANTE!!
 
-// NÃO INFORME DADOS REAIS, MESMO QUE OS MESMOS NÃO SEJAM SALVOS EM ALGUM REGISTRO DE DADOS, RECOMENDO QUE USE DADOS FALSOS JÁ QUE ESTA É APENAS UMA API SIMULADA!
+// NÃO INFORME DADOS REAIS, MESMO QUE OS MESMOS NÃO SEJAM SALVOS EM ALGUM REGISTRO DE DADOS,
+// RECOMENDO QUE USE DADOS FALSOS JÁ QUE ESTA É APENAS UMA API SIMULADA!
 
 {
     "nome": "Ana Clara da Silva",
