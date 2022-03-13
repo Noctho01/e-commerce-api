@@ -14,6 +14,14 @@ class NotFound extends Error {
 	}
 }
 
+class NewExceotion extends Error {
+	constructor(message, code) {
+		super(message)
+		this.message = message
+		this.statusCode = code
+	}
+}
+
 class ValidationError extends Error {
 	constructor (message) {
 		super(message)
@@ -69,5 +77,6 @@ export {
 	TipoUsuario,
 	SenhaIncorreta,
 	TokenNotFound,
-	CreateEntidadeError
+	CreateEntidadeError,
+	NewExceotion
 }

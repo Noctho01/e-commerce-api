@@ -173,9 +173,9 @@ class ProdutoServices {
 			produto.plataforma = produto.plataforma.plataforma
 		}
 
-		return carrinhoUsuario.carrinho.length === 0
-			? { message: "carrinho vazio" }
-			: carrinhoUsuario.carrinho
+		if (carrinhoUsuario.carrinho.length === 0) throw CustomErrors.NewExceotion('Carrinho está vazio', 404)
+
+		return carrinhoUsuario.carrinho
 	}
 
 	async updateProdutoCarrinho(body, produtoId, userId) {
