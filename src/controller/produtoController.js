@@ -59,10 +59,8 @@ class ProdutoController {
 		return res
 			.status(200)
 			.json({
-				paymentSlip: {
-					paymentSlip,
-					produtos
-				}
+				paymentSlip,
+				produtos
 			})
 	}
 
