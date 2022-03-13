@@ -173,7 +173,7 @@ class ProdutoServices {
 			produto.plataforma = produto.plataforma.plataforma
 		}
 
-		if (carrinhoUsuario.carrinho.length === 0) throw CustomErrors.NewExceotion('Carrinho está vazio', 404)
+		if (carrinhoUsuario.carrinho.length === 0) throw new CustomErrors.NewExceotion('Carrinho está vazio', 404)
 
 		return carrinhoUsuario.carrinho
 	}
