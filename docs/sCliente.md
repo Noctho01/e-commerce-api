@@ -17,14 +17,14 @@ Retorna uma lista de jogos adicionados ao carrinho do cliente.
 <code>RESPONSE: *200*, *application/json*, *Array*</code>
 ~~~json
 [
-	{
-		"id": 8,
-		"nome": "The Blue Kingdon",
-		"preco": 133.16,
-		"estoque": 1,
-		"plataforma": "Nintendo Switch",
-		"quantidade": 1
-	}
+    {
+        "id": 8,
+        "nome": "The Blue Kingdon",
+        "preco": 133.16,
+        "estoque": 1,
+        "plataforma": "Nintendo Switch",
+        "quantidade": 1
+    }
 ]
 ~~~
 

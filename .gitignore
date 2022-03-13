@@ -6,7 +6,7 @@ src/config/.env.pro
 node_modules
 
 #temporario
-docs
+#docs
 
 # docker
 Dockerfile
