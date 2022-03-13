@@ -13,10 +13,7 @@ class ProdutoController {
 		await produtoServices.addProdutoCarrinho(quantidade, produtoId, userId)
 		return res
 			.status(201)
-			.json({
-				status: 'Ok',
-				message: 'added'
-			})
+			.json({ message: 'added' })
 	}
 
 	async getCarrinho(req, res) {
@@ -24,11 +21,7 @@ class ProdutoController {
 		const carrinho = await produtoServices.getCarrinho(userId)
 		return res
 			.status(200)
-			.json({
-				status: 'Ok',
-				message: 'geted',
-				data: carrinho
-			})
+			.json(carrinho)
 	}
 
 	async updateProdutoCarrinho(req, res) {
@@ -38,10 +31,7 @@ class ProdutoController {
 		await produtoServices.updateProdutoCarrinho(dataToUpdate, produtoId, userId)
 		return res
 			.status(200)
-			.json({
-				status: 'Ok',
-				message: 'updated'
-			})
+			.json({ message: 'updated' })
 	}
 
 	async deleteProdutoCarrinho(req, res) {
@@ -50,10 +40,7 @@ class ProdutoController {
 		await produtoServices.deleteProdutoCarrinho(produtoId, userId)
 		return res
 			.status(201)
-			.json({
-				status: 'Ok',
-				message: 'deleted'
-			})
+			.json({ message: 'deleted' })
 	}
 
 
@@ -72,7 +59,7 @@ class ProdutoController {
 		return res
 			.status(200)
 			.json({
-				paymentSlip,
+				comprador: paymentSlip,
 				produtos
 			})
 	}
@@ -121,11 +108,8 @@ class ProdutoController {
 		return res
 		.status(200)
 		.json({
-			status: "Ok",
-			message: {
-				pagamento: "Aprovado",
-				extrato
-			}
+			pagamento: "Aprovado",
+			extrato
 		})
 	}
 
@@ -134,10 +118,7 @@ class ProdutoController {
 		const produtos = await produtoServices.getClienteProdutos(userId)	
 		return res
 			.status(200)
-			.json({
-				status: "Ok",
-				produtos
-			})
+			.json(produtos)
 	}
 
 	async catalog(req, res) {
