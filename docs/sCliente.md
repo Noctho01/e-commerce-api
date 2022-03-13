@@ -136,36 +136,144 @@ ex: /cliente/carrinho/solicitar/0
 <br>
 <br>
 
-![](https://img.shields.io/static/v1?label=&message=POST&color=268fbe&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/cliente&color=eafde6&style=for-the-badge)
+![](https://img.shields.io/static/v1?label=&message=GET&color=77ab59&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/cliente/carrinho/extrato&color=eafde6&style=for-the-badge)
+
+Gera um extrato com base nos jogos existentes no carrinho de compra do cliente, nada é registrado ainda, somente uma simulação do valor total da compra caso seja feita.
 
 **Necessario:** *usuario logado como cliente (token criado atavez do serviço login)*
+
+<code>RESPONSE: *200*, *application/json*, *Object*</code>
+~~~json
+{
+    "paymentSlip": {
+        "cliente": "Ana Clara da Silva",
+        "valor_total": 48.68
+    },
+    "produtos": [
+        {
+            "nome": "God of War 1",
+            "preco": 48.68,
+            "quantidade": 1
+        }
+    ]
+}
+~~~
+
+**paymentSlip**: Object, dados da compra
+
+**cliente**: String, nome do comprador
+
+**valor_total**: Float, valor total da compra
+
+**produtos**: Array, lista de jogos que seram comprados
+
+**nome**: String, nome do produto/jogo
+
+**preco**: Float, valor total das unidades deste produto/jogo
+
+**quantidade**: Integer, numero de unidades solicitadas
 
 #
 
 <br>
 <br>
 
-![](https://img.shields.io/static/v1?label=&message=POST&color=268fbe&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/cliente&color=eafde6&style=for-the-badge)
+![](https://img.shields.io/static/v1?label=&message=PUT&color=f5dd7e&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/cliente/carrinho/id&color=eafde6&style=for-the-badge)
+
+Altera produtos/jogos que estão no carrinho de compras do cliente.
 
 **Necessario:** *usuario logado como cliente (token criado atavez do serviço login)*
+
+<code>PARAMETRO: *id*</code>
+~~~
+id do produto existente no carrinho de compras do cliente
+ex: /cliente/carrinho/8
+~~~
+
+<code>REQUEST: *application/json*, *Object*</code>
+~~~json
+{
+    "quantidade": 3
+}
+~~~
+
+**quantidade**: Integer, novo valor de unidades deste produto para adicionar ao carrinho
+
+<code>RESPONSE: *201*, *application/json*, *Object*</code>
+~~~json
+{
+    "message": "Updated"
+}
+~~~
 
 #
 
 <br>
 <br>
 
-![](https://img.shields.io/static/v1?label=&message=POST&color=268fbe&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/cliente&color=eafde6&style=for-the-badge)
+![](https://img.shields.io/static/v1?label=&message=DELETE&color=e35241&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=cliente/carrinho/id&color=eafde6&style=for-the-badge)
+
+Remove produto/jogo do carrinho de compras do cliente.
 
 **Necessario:** *usuario logado como cliente (token criado atavez do serviço login)*
+
+<code>PARAMETRO: *id*</code>
+~~~
+id do produto existente no carrinho de compras do cliente
+ex: /cliente/carrinho/8
+~~~
+
+<code>RESPONSE: *201*, *application/json*, *Object*</code>
+~~~json
+{
+    "message": "Deleted"
+}
+~~~
 
 #
 
 <br>
 <br>
 
-![](https://img.shields.io/static/v1?label=&message=POST&color=268fbe&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/cliente&color=eafde6&style=for-the-badge)
+![](https://img.shields.io/static/v1?label=&message=GET&color=77ab59&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/cliente/produtos&color=eafde6&style=for-the-badge)
+
+Retorna lista dos dados de produtos comprados pelo cliente.
 
 **Necessario:** *usuario logado como cliente (token criado atavez do serviço login)*
+
+<code>RESPONSE: *200*, *application/json*, *Array*</code>
+~~~json
+[
+    {
+        "id": 14,
+        "quantidade": 2,
+        "valor_total": 48.68,
+        "forma_pagamento": "CreditCard",
+        "produto": "God of War 1",
+        "estado": "Produto Solicitado"
+    }
+]
+~~~
+
+**id**: Integer, id de registro da compra (não é o id do produto nem do cliente)
+
+**quantidade**: Integer, numero de unidades solicitadas pelo cliente
+
+**valor_total**: Float, valor total pago por esta(s) unidade(s)
+
+**forma_pagamento**: String, atualmente a api simula somente "pagamentos" com cartão de credito
+
+**produto**: String, nome do produto/jogo solicitado
+
+**estado**: String, estado da compra do produto/jogo
+
+- "Produto Solicitado"
+- "Solicitação Aprovada"
+- "Solicitação Recusada"
+- "Produto Enviado"
+- "Produto Entregue"
+- "Concluido"
+- "Problemas"
 
 #
 
