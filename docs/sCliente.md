@@ -47,7 +47,31 @@ Retorna uma lista de jogos adicionados ao carrinho do cliente.
 
 ![](https://img.shields.io/static/v1?label=&message=POST&color=268fbe&style=for-the-badge) ![](https://img.shields.io/static/v1?label=&message=/cliente/carrinho/id&color=eafde6&style=for-the-badge)
 
+Adiciona jogos ao carrinho de compras do cliente.
+
 **Necessario:** *usuario logado como cliente (token criado atavez do serviço login)*
+
+<code>PARAMETRO: *id*</code>
+~~~
+id do jogo/produto
+ex: /cliente/carrinho/8
+~~~
+
+<code>REQUEST: *application/json*, *Object*</code>
+~~~json
+{
+    "quantidade": 2
+}
+~~~
+
+**quantidade**: Integer, numero de unidades solicitadas pelo cliente
+
+<code>RESPONSE: *201*, *application/json*, *Object*</code>
+~~~json
+{
+    "message": "added"
+}
+~~~
 
 #
 
