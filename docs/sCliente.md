@@ -43,7 +43,7 @@ Retorna uma lista de jogos adicionados ao carrinho do cliente.
 <br>
 <br>
 
-<code>RESPONSE: *404*, *application/json*, *Array*</code>
+<code>RESPONSE: *404*, *application/json*, *Object*</code>
 ~~~json
 {
     "message": "Carrinho está vazio"
