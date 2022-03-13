@@ -174,7 +174,7 @@ class ProdutoServices {
 		}
 
 		return carrinhoUsuario.carrinho.length === 0
-			? "carrinho vazio"
+			? { message: "carrinho vazio" }
 			: carrinhoUsuario.carrinho
 	}
 
