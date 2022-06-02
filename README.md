@@ -3,8 +3,8 @@
 <p align="center"><i>APi sistema de um e-commerce para compra de jogos novos e usados</i></p>
 <br>
 <div align="center">
-    <img src="https://img.shields.io/static/v1?label=version&message=1.0.0&color=7159c1&style=for-the-badge&logo=<LOGO>"/>
-    <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=7159c1&style=for-the-badge&logo=<LOGO>"/>
+    <img src="https://img.shields.io/static/v1?label=version&message=1.0.0&color=7159c1&style=for-the-badge&logo=LOGO"/>
+    <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=7159c1&style=for-the-badge&logo=LOGO"/>
 </div>
 <br>
 
